@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Commandline client for Curseforge</title>
+    <title>Cursecli</title>
     <link>https://webhippie.github.io/cursecli/</link>
-    <description>Recent content on Commandline client for Curseforge</description>
+    <description>Recent content on Cursecli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://webhippie.github.io/cursecli/index.xml" rel="self" type="application/rss+xml" />
     <item>
