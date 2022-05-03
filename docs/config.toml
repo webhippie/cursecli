@@ -1,0 +1,19 @@
+baseURL = "https://webhippie.github.io/cursecli/"
+languageCode = "en-us"
+title = "Commandline client for Curseforge"
+pygmentsUseClasses = true
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[blackfriday]
+  angledQuotes = true
+  fractions = false
+  plainIDAnchors = true
+  smartlists = true
+  extensions = ["hardLineBreak"]
+
+[params]
+  author = "Thomas Boerger"
+  description = "Commandline client for Curseforge"
+  keywords = "curseforge, client, cli, manifest"
