@@ -186,7 +186,3 @@ release-finish: release-reduce release-checksum
 .PHONY: docs
 docs:
 	hugo -s docs/
-
-.PHONY: envvars
-envvars:
-	go run hack/generate-envvars-docs.go
