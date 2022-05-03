@@ -1,6 +1,6 @@
 baseURL = "https://webhippie.github.io/cursecli/"
 languageCode = "en-us"
-title = "Commandline client for Curseforge"
+title = "Cursecli"
 pygmentsUseClasses = true
 
 [markup.goldmark.renderer]
