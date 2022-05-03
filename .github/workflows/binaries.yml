@@ -41,7 +41,6 @@ jobs:
 
       - name: Sign release
         id: gpgsign
-        if: startsWith(github.ref, 'refs/tags/')
         uses: actionhippie/gpgsign@v1
         with:
           private_key: ${{ secrets.GNUPG_KEY }}
