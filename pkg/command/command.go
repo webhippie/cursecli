@@ -16,9 +16,10 @@ func Run() error {
 		Name:     "cursecli",
 		Version:  version.String,
 		Usage:    "Commandline client for Curseforge",
-		Authors:  authorList(),
-		Flags:    globalFlags(cfg),
-		Commands: globalCommands(cfg),
+		Authors:  AuthorList(),
+		Flags:    GlobalFlags(cfg),
+		Before:   GlobalBefore(cfg),
+		Commands: GlobalCmds(cfg),
 	}
 
 	cli.HelpFlag = &cli.BoolFlag{
@@ -36,7 +37,8 @@ func Run() error {
 	return app.Run(os.Args)
 }
 
-func authorList() []*cli.Author {
+// AuthorList defines the list of authors.
+func AuthorList() []*cli.Author {
 	return []*cli.Author{
 		{
 			Name:  "Thomas Boerger",
@@ -45,7 +47,8 @@ func authorList() []*cli.Author {
 	}
 }
 
-func globalFlags(cfg *config.Config) []cli.Flag {
+// GlobalFlags defines the list of global flags.
+func GlobalFlags(cfg *config.Config) []cli.Flag {
 	return []cli.Flag{
 		&cli.StringFlag{
 			Name:        "log-level",
@@ -71,8 +74,16 @@ func globalFlags(cfg *config.Config) []cli.Flag {
 	}
 }
 
-func globalCommands(cfg *config.Config) []*cli.Command {
+// GlobalBefore defines a global hook for setup.
+func GlobalBefore(cfg *config.Config) cli.BeforeFunc {
+	return func(c *cli.Context) error {
+		return setupLogger(cfg)
+	}
+}
+
+// GlobalCmds defines the global commands.
+func GlobalCmds(cfg *config.Config) []*cli.Command {
 	return []*cli.Command{
-		Download(cfg),
+		ManifestCmd(cfg),
 	}
 }
