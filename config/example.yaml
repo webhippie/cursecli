@@ -1,0 +1,16 @@
+---
+log:
+  level: info
+  pretty: true
+  color: true
+
+api:
+  key:
+
+manifest:
+  path: manifest.json
+
+mods:
+  path: mods/
+
+...
