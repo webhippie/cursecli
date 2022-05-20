@@ -185,7 +185,7 @@ jobs:
           target: webhippie/cursecli
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          description: HetznerCloud Exporter
+          description: Cursecli
           readme: README.md
 
       - name: Quay readme
