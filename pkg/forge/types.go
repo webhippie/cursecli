@@ -1,4 +1,8 @@
-package forgesvc
+package forge
+
+import (
+	"encoding/json"
+)
 
 // HashAlgo defines the available hash algorithms.
 type HashAlgo int
@@ -36,8 +40,21 @@ type File struct {
 	Hashes []Hash `json:"hashes"`
 }
 
+// UnmarshalJSON implements the JSON unmarshaling.
+func (f *File) UnmarshalJSON(b []byte) error {
+	type F File
+	var v F
+
+	if err := json.Unmarshal(b, &struct{ Data *F }{&v}); err != nil {
+		return err
+	}
+
+	*f = File(v)
+	return nil
+}
+
 // Hash represents a single hash from the forgesvc API.
 type Hash struct {
-	Algo  HashAlgo `json:"algorithm"`
+	Algo  HashAlgo `json:"algo"`
 	Value string   `json:"value"`
 }
