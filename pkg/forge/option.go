@@ -1,4 +1,4 @@
-package forgesvc
+package forge
 
 import (
 	"net"
@@ -15,6 +15,7 @@ type Option func(o *Options)
 type Options struct {
 	HTTPClient *http.Client
 	Path       string
+	APIKey     string
 	Manifest   manifest.Manifest
 }
 
@@ -42,6 +43,13 @@ func WithHTTPClient(v *http.Client) Option {
 func WithPath(v string) Option {
 	return func(o *Options) {
 		o.Path = v
+	}
+}
+
+// WithAPIKey provides a function to set the apikey option.
+func WithAPIKey(v string) Option {
+	return func(o *Options) {
+		o.APIKey = v
 	}
 }
 

@@ -1,4 +1,4 @@
-package forgesvc
+package forge
 
 import (
 	"encoding/json"
@@ -14,29 +14,31 @@ import (
 )
 
 const (
-	downloadURL = "https://addons-ecs.forgesvc.net/api/v2/addon/%d/file/%d"
+	downloadURL = "https://api.curseforge.com/v1/mods/%d/files/%d"
 )
 
-// Forgesvc defines the forgesvc itself.
-type Forgesvc struct {
+// Forge defines the forgesvc itself.
+type Forge struct {
 	HTTPClient *http.Client
 	Path       string
+	APIKey     string
 	Manifest   manifest.Manifest
 }
 
 // New parses and prepares a manifest definition.
-func New(opts ...Option) (*Forgesvc, error) {
+func New(opts ...Option) (*Forge, error) {
 	sopts := newOptions(opts...)
 
-	return &Forgesvc{
+	return &Forge{
 		HTTPClient: sopts.HTTPClient,
 		Path:       sopts.Path,
+		APIKey:     sopts.APIKey,
 		Manifest:   sopts.Manifest,
 	}, nil
 }
 
 // DownloadManifest downloads all mods defined within a manifest.
-func (f *Forgesvc) DownloadManifest() error {
+func (f *Forge) DownloadManifest() error {
 	if err := os.MkdirAll(f.Path, os.ModePerm); err != nil {
 		log.Error().
 			Err(err).
@@ -47,7 +49,7 @@ func (f *Forgesvc) DownloadManifest() error {
 	}
 
 	for _, file := range f.Manifest.Files {
-		resp, err := f.HTTPClient.Get(
+		resp, err := f.get(
 			fmt.Sprintf(
 				downloadURL,
 				file.ProjectID,
@@ -81,6 +83,12 @@ func (f *Forgesvc) DownloadManifest() error {
 		download := File{}
 
 		if err := json.Unmarshal(body, &download); err != nil {
+			fmt.Printf(
+				downloadURL,
+				file.ProjectID,
+				file.FileID,
+			)
+
 			log.Error().
 				Err(err).
 				Int("project", file.ProjectID).
@@ -94,6 +102,13 @@ func (f *Forgesvc) DownloadManifest() error {
 			download.Name,
 			download.URL,
 		); err != nil {
+			log.Error().
+				Err(err).
+				Int("project", file.ProjectID).
+				Int("file", file.FileID).
+				Str("name", download.Name).
+				Msg("Failed to download mod")
+
 			return err
 		}
 
@@ -107,8 +122,8 @@ func (f *Forgesvc) DownloadManifest() error {
 	return nil
 }
 
-func (f *Forgesvc) downloadFile(name, url string) error {
-	resp, err := f.HTTPClient.Get(
+func (f *Forge) downloadFile(name, url string) error {
+	resp, err := f.get(
 		url,
 	)
 
@@ -127,4 +142,23 @@ func (f *Forgesvc) downloadFile(name, url string) error {
 	_, err = io.Copy(out, resp.Body)
 
 	return err
+}
+
+func (f *Forge) get(url string) (*http.Response, error) {
+	req, err := http.NewRequest("GET", url, nil)
+
+	if err != nil {
+		return nil, err
+	}
+
+	return f.do(req)
+}
+
+func (f *Forge) do(req *http.Request) (*http.Response, error) {
+	req.Header.Set(
+		"x-api-key",
+		f.APIKey,
+	)
+
+	return f.HTTPClient.Do(req)
 }

@@ -2,7 +2,7 @@
 title: "Building"
 date: 2022-05-03T00:00:00+00:00
 anchor: "building"
-weight: 20
+weight: 30
 ---
 
 As this project is built with Go you need to install Go first. The installation

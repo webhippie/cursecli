@@ -1,120 +1,78 @@
 package command
 
 import (
+	"os"
+
 	"github.com/rs/zerolog/log"
-	"github.com/urfave/cli/v2"
-	"github.com/webhippie/cursecli/pkg/config"
-	"github.com/webhippie/cursecli/pkg/forgesvc"
+	"github.com/spf13/cobra"
+	"github.com/spf13/viper"
+	"github.com/webhippie/cursecli/pkg/forge"
 	"github.com/webhippie/cursecli/pkg/manifest"
 )
 
-// ManifestCmd provides the sub-command manifest.
-func ManifestCmd(cfg *config.Config) *cli.Command {
-	return &cli.Command{
-		Name:        "manifest",
-		Usage:       "Manifest related commands",
-		Flags:       ManifestFlags(cfg),
-		Subcommands: ManifestCmds(cfg),
+var (
+	manifestCmd = &cobra.Command{
+		Use:   "manifest",
+		Short: "Manifest related commands",
 	}
-}
 
-// ManifestFlags defines the flags for the manifest sub-command.
-func ManifestFlags(cfg *config.Config) []cli.Flag {
-	return []cli.Flag{
-		&cli.StringFlag{
-			Name:        "manifest",
-			Value:       "manifest.json",
-			Usage:       "Path to manifest to parse",
-			EnvVars:     []string{"CURSECLI_MANIFEST"},
-			Destination: &cfg.General.Manifest,
-		},
+	manifestDownloadCmd = &cobra.Command{
+		Use:   "download",
+		Short: "Download related commands",
 	}
-}
 
-// ManifestCmds defines the sub-commands for the manifest command.
-func ManifestCmds(cfg *config.Config) []*cli.Command {
-	return []*cli.Command{
-		ManifestDownloadCmd(cfg),
+	manifestDownloadModsCmd = &cobra.Command{
+		Use:   "mods",
+		Short: "Download mods defined within manifest",
+		Run:   manifestDownloadModsAction,
 	}
+
+	defaultManifestPath = "manifest.json"
+	defaultModsPath     = "mods/"
+)
+
+func init() {
+	rootCmd.AddCommand(manifestCmd)
+	manifestCmd.AddCommand(manifestDownloadCmd)
+	manifestDownloadCmd.AddCommand(manifestDownloadModsCmd)
+
+	manifestCmd.PersistentFlags().String("manifest", defaultManifestPath, "Path to manifest to parse")
+	viper.SetDefault("manifest.path", defaultManifestPath)
+	viper.BindPFlag("manifest.path", manifestCmd.PersistentFlags().Lookup("manifest"))
+
+	manifestDownloadModsCmd.PersistentFlags().String("path", defaultModsPath, "Path to download destination")
+	viper.SetDefault("mods.path", defaultModsPath)
+	viper.BindPFlag("mods.path", manifestDownloadModsCmd.PersistentFlags().Lookup("path"))
 }
 
-// ManifestDownloadCmd provides the sub-command manifest download.
-func ManifestDownloadCmd(cfg *config.Config) *cli.Command {
-	return &cli.Command{
-		Name:        "download",
-		Usage:       "Download related commands",
-		Flags:       ManifestDownloadFlags(cfg),
-		Subcommands: ManifestDownloadCmds(cfg),
+func manifestDownloadModsAction(ccmd *cobra.Command, args []string) {
+	m, err1 := manifest.New(
+		manifest.WithPath(viper.GetString("manifest.path")),
+	)
+
+	if err1 != nil {
+		log.Error().
+			Err(err1).
+			Msg("Failed to parse manifest")
+
+		os.Exit(1)
 	}
-}
 
-// ManifestDownloadFlags defines the flags for the manifest download sub-command.
-func ManifestDownloadFlags(cfg *config.Config) []cli.Flag {
-	return []cli.Flag{}
-}
+	f, err2 := forge.New(
+		forge.WithPath(viper.GetString("mods.path")),
+		forge.WithAPIKey(viper.GetString("api.key")),
+		forge.WithManifest(m),
+	)
 
-// ManifestDownloadCmds defines the sub-commands for the manifest download command.
-func ManifestDownloadCmds(cfg *config.Config) []*cli.Command {
-	return []*cli.Command{
-		ManifestDownloadModsCmd(cfg),
+	if err2 != nil {
+		log.Error().
+			Err(err2).
+			Msg("Failed to initalize client")
+
+		os.Exit(1)
 	}
-}
 
-// ManifestDownloadModsCmd provides the sub-command manifest download mods.
-func ManifestDownloadModsCmd(cfg *config.Config) *cli.Command {
-	return &cli.Command{
-		Name:   "mods",
-		Usage:  "Download mods defined within manifest",
-		Flags:  ManifestDownloadModsFlags(cfg),
-		Action: ManifestDownloadModsAction(cfg),
-	}
-}
-
-// ManifestDownloadModsFlags defines the flags for the manifest download mods sub-command.
-func ManifestDownloadModsFlags(cfg *config.Config) []cli.Flag {
-	return []cli.Flag{
-		&cli.StringFlag{
-			Name:        "path",
-			Value:       "mods/",
-			Usage:       "Path to download destination",
-			EnvVars:     []string{"CURSECLI_PATH", "CURSECLI_DOWNLOAD_MODS_PATH"},
-			Destination: &cfg.General.Path,
-		},
-	}
-}
-
-// ManifestDownloadModsAction implements the action for the manifest download mods command.
-func ManifestDownloadModsAction(cfg *config.Config) cli.ActionFunc {
-	return func(c *cli.Context) error {
-		m, err1 := manifest.New(
-			manifest.WithPath(c.String("manifest")),
-		)
-
-		if err1 != nil {
-			log.Error().
-				Err(err1).
-				Msg("Failed to parse manifest")
-
-			return err1
-		}
-
-		f, err2 := forgesvc.New(
-			forgesvc.WithPath(c.String("path")),
-			forgesvc.WithManifest(m),
-		)
-
-		if err2 != nil {
-			log.Error().
-				Err(err2).
-				Msg("Failed to initalize client")
-
-			return err2
-		}
-
-		if err := f.DownloadManifest(); err != nil {
-			return err
-		}
-
-		return nil
+	if err := f.DownloadManifest(); err != nil {
+		os.Exit(1)
 	}
 }
