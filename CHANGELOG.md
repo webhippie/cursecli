@@ -1,3 +1,22 @@
+# Changelog for 1.1.1
+
+The following sections list the changes for 1.1.1.
+
+## Summary
+
+ * Fix #8: Some mods are missing a download URL
+
+## Details
+
+ * Bugfix #8: Some mods are missing a download URL
+
+   We found the cases where the provided download URL from the curseforge API were missing, to work
+   around this we are constructing the URL as a fallback now. This is identicated by the fallback
+   flag within the logs now.
+
+   https://github.com/webhippie/cursecli/issues/8
+
+
 # Changelog for 1.1.0
 
 The following sections list the changes for 1.1.0.

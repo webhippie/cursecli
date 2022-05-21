@@ -2,6 +2,8 @@ package forge
 
 import (
 	"encoding/json"
+	"fmt"
+	"strconv"
 )
 
 // HashAlgo defines the available hash algorithms.
@@ -33,11 +35,12 @@ var HashAlgoToID = map[string]HashAlgo{
 
 // File represents a single file from the forgesvc API.
 type File struct {
-	ID     int    `json:"id"`
-	Name   string `json:"fileName"`
-	Size   int    `json:"fileLength"`
-	URL    string `json:"downloadUrl"`
-	Hashes []Hash `json:"hashes"`
+	ID       int    `json:"id"`
+	Name     string `json:"fileName"`
+	Size     int    `json:"fileLength"`
+	URL      string `json:"downloadUrl"`
+	Fallback bool   `json:"-"`
+	Hashes   []Hash `json:"hashes"`
 }
 
 // UnmarshalJSON implements the JSON unmarshaling.
@@ -50,6 +53,20 @@ func (f *File) UnmarshalJSON(b []byte) error {
 	}
 
 	*f = File(v)
+
+	if f.URL == "" {
+		identifier := strconv.Itoa(f.ID)
+
+		f.URL = fmt.Sprintf(
+			"https://edge.forgecdn.net/files/%s/4%s/%s",
+			identifier[0:4],
+			identifier[5:len(identifier)-1],
+			f.Name,
+		)
+
+		f.Fallback = true
+	}
+
 	return nil
 }
 
