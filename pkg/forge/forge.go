@@ -83,12 +83,6 @@ func (f *Forge) DownloadManifest() error {
 		download := File{}
 
 		if err := json.Unmarshal(body, &download); err != nil {
-			fmt.Printf(
-				downloadURL,
-				file.ProjectID,
-				file.FileID,
-			)
-
 			log.Error().
 				Err(err).
 				Int("project", file.ProjectID).
@@ -107,6 +101,7 @@ func (f *Forge) DownloadManifest() error {
 				Int("project", file.ProjectID).
 				Int("file", file.FileID).
 				Str("name", download.Name).
+				Bool("fallback", download.Fallback).
 				Msg("Failed to download mod")
 
 			return err
@@ -116,6 +111,7 @@ func (f *Forge) DownloadManifest() error {
 			Int("project", file.ProjectID).
 			Int("file", file.FileID).
 			Str("name", download.Name).
+			Bool("fallback", download.Fallback).
 			Msg("Successfully downloaded mod")
 	}
 
