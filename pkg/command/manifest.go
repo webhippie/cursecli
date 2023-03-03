@@ -45,7 +45,7 @@ func init() {
 	viper.BindPFlag("mods.path", manifestDownloadModsCmd.PersistentFlags().Lookup("path"))
 }
 
-func manifestDownloadModsAction(ccmd *cobra.Command, args []string) {
+func manifestDownloadModsAction(_ *cobra.Command, _ []string) {
 	m, err1 := manifest.New(
 		manifest.WithPath(viper.GetString("manifest.path")),
 	)
