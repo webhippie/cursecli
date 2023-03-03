@@ -3,7 +3,6 @@ package manifest
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"os"
 )
 
@@ -30,7 +29,7 @@ func New(opts ...Option) (Manifest, error) {
 		return manifest, fmt.Errorf("failed to check manifest: %w", err)
 	}
 
-	rawdata, err := ioutil.ReadFile(sopts.Path)
+	rawdata, err := os.ReadFile(sopts.Path)
 
 	if err != nil {
 		return manifest, fmt.Errorf("failed to read manifest: %w", err)
