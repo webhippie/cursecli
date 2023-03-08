@@ -25,6 +25,7 @@ var (
 		Use:   "mods",
 		Short: "Download mods defined within manifest",
 		Run:   manifestDownloadModsAction,
+		Args:  cobra.NoArgs,
 	}
 
 	defaultManifestPath = "manifest.json"
