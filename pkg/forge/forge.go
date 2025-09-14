@@ -66,7 +66,7 @@ func (f *Forge) DownloadManifest() error {
 			return err
 		}
 
-		defer resp.Body.Close()
+		defer func() { _ = resp.Body.Close() }()
 		body, err := io.ReadAll(resp.Body)
 
 		if err != nil {
@@ -126,14 +126,14 @@ func (f *Forge) downloadFile(name, url string) error {
 		return err
 	}
 
-	defer resp.Body.Close()
+	defer func() { _ = resp.Body.Close() }()
 	out, err := os.Create(filepath.Join(f.Path, name))
 
 	if err != nil {
 		return err
 	}
 
-	defer out.Close()
+	defer func() { _ = out.Close() }()
 	_, err = io.Copy(out, resp.Body)
 
 	return err
