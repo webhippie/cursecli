@@ -39,11 +39,11 @@ func init() {
 
 	manifestCmd.PersistentFlags().String("manifest", defaultManifestPath, "Path to manifest to parse")
 	viper.SetDefault("manifest.path", defaultManifestPath)
-	viper.BindPFlag("manifest.path", manifestCmd.PersistentFlags().Lookup("manifest"))
+	_ = viper.BindPFlag("manifest.path", manifestCmd.PersistentFlags().Lookup("manifest"))
 
 	manifestDownloadModsCmd.PersistentFlags().String("path", defaultModsPath, "Path to download destination")
 	viper.SetDefault("mods.path", defaultModsPath)
-	viper.BindPFlag("mods.path", manifestDownloadModsCmd.PersistentFlags().Lookup("path"))
+	_ = viper.BindPFlag("mods.path", manifestDownloadModsCmd.PersistentFlags().Lookup("path"))
 }
 
 func manifestDownloadModsAction(_ *cobra.Command, _ []string) {
