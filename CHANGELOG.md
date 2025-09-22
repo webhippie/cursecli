@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/webhippie/cursecli/compare/v2.0.0...v2.1.0) (2025-09-22)
+
+
+### Features
+
+* **minor:** update module github.com/golangci/golangci-lint/v2 to v2.5.0 ([#138](https://github.com/webhippie/cursecli/issues/138)) ([0d3176b](https://github.com/webhippie/cursecli/commit/0d3176b7fec80efcca98479e844127956b44cb80))
+
 ## [2.0.0](https://github.com/webhippie/cursecli/compare/v1.1.1...v2.0.0) (2025-09-15)
 
 
