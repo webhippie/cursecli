@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.2](https://github.com/webhippie/cursecli/compare/v2.1.1...v2.1.2) (2025-10-20)
+
+
+### Bugfixes
+
+* **deps:** update golang:1.25.3-alpine3.21 docker digest to 0c9f3e0 ([#155](https://github.com/webhippie/cursecli/issues/155)) ([107f137](https://github.com/webhippie/cursecli/commit/107f13722389b87a5a4f9afecbd3bbf46b3b9294))
+* **patch:** update golang docker tag to v1.25.3 ([#152](https://github.com/webhippie/cursecli/issues/152)) ([e3a4dff](https://github.com/webhippie/cursecli/commit/e3a4dff6c89290a6705956ffff07962d8788d337))
+
 ## [2.1.1](https://github.com/webhippie/cursecli/compare/v2.1.0...v2.1.1) (2025-10-13)
 
 
