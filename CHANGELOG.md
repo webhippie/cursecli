@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.2.1](https://github.com/webhippie/cursecli/compare/v2.2.0...v2.2.1) (2025-11-10)
+
+
+### Bugfixes
+
+* **deps:** update golang:1.25.4-alpine3.21 docker digest to 3289aac ([#165](https://github.com/webhippie/cursecli/issues/165)) ([842d0af](https://github.com/webhippie/cursecli/commit/842d0af410489fc6237895c9ae8d8e55572ecdd4))
+* **patch:** update golang docker tag to v1.25.4 ([#164](https://github.com/webhippie/cursecli/issues/164)) ([786535c](https://github.com/webhippie/cursecli/commit/786535ccf00dbd4ca682672dea8c9f3a7db2137e))
+* **patch:** update module github.com/golangci/golangci-lint/v2 to v2.6.1 ([#161](https://github.com/webhippie/cursecli/issues/161)) ([35163e2](https://github.com/webhippie/cursecli/commit/35163e2ff403f8f0a06658e4cbdc7a679248b168))
+
 ## [2.2.0](https://github.com/webhippie/cursecli/compare/v2.1.2...v2.2.0) (2025-11-03)
 
 
