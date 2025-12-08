@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.3.0](https://github.com/webhippie/cursecli/compare/v2.2.2...v2.3.0) (2025-12-08)
+
+
+### Features
+
+* **minor:** update alpine docker tag to v3.23 ([#180](https://github.com/webhippie/cursecli/issues/180)) ([f2aeb42](https://github.com/webhippie/cursecli/commit/f2aeb428977cb570ffd1f51da24b81238cd5d982))
+* **minor:** update module github.com/golangci/golangci-lint/v2 to v2.7.0 ([#179](https://github.com/webhippie/cursecli/issues/179)) ([7fb77a0](https://github.com/webhippie/cursecli/commit/7fb77a08884b2154297bd1a9ae955549afbe1af0))
+
+
+### Bugfixes
+
+* **patch:** update golang docker tag to v1.25.5 ([#177](https://github.com/webhippie/cursecli/issues/177)) ([ee39d97](https://github.com/webhippie/cursecli/commit/ee39d9724e6043be7866950fe36df2b702d92ca6))
+* **patch:** update module github.com/spf13/cobra to v1.10.2 ([#181](https://github.com/webhippie/cursecli/issues/181)) ([1d6fde1](https://github.com/webhippie/cursecli/commit/1d6fde13bd5af8dc888356c006a30f6054608fd8))
+
 ## [2.2.2](https://github.com/webhippie/cursecli/compare/v2.2.1...v2.2.2) (2025-11-17)
 
 
