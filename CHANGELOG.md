@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.3.1](https://github.com/webhippie/cursecli/compare/v2.3.0...v2.3.1) (2025-12-22)
+
+
+### Bugfixes
+
+* **deps:** update alpine:3.23 docker digest to 865b95f ([#189](https://github.com/webhippie/cursecli/issues/189)) ([eda0ff4](https://github.com/webhippie/cursecli/commit/eda0ff4cbe8f8d8a197bfdbdaef57d64ea2bb14a))
+* **deps:** update alpine:3.23 docker digest to be171b5 ([#188](https://github.com/webhippie/cursecli/issues/188)) ([020f235](https://github.com/webhippie/cursecli/commit/020f2357a0d67f4d7a35ddef6fef9abd87492340))
+
 ## [2.3.0](https://github.com/webhippie/cursecli/compare/v2.2.2...v2.3.0) (2025-12-08)
 
 
