@@ -1,5 +1,20 @@
 # Changelog
 
+## [2.3.2](https://github.com/webhippie/cursecli/compare/v2.3.1...v2.3.2) (2026-02-02)
+
+### Bugfixes
+
+* **deps:** update alpine:3.23 docker digest to 2510918 ([#198](https://github.com/webhippie/cursecli/issues/198)) ([0a5f294](https://github.com/webhippie/cursecli/commit/0a5f294554b1fe34515ac534cb4f83a92c4c2031))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([e2ef968](https://github.com/webhippie/cursecli/commit/e2ef9681d5782f197202a06aea53ecf1d5cbaeb8))
+* **flake:** updated lockfile [skip ci] ([16ca8ec](https://github.com/webhippie/cursecli/commit/16ca8ec7f0503fc6015337bcb4779188e45c7bfe))
+* **flake:** updated lockfile [skip ci] ([9357b53](https://github.com/webhippie/cursecli/commit/9357b53e7876e9239871437dc488a64f82490425))
+* **flake:** updated lockfile [skip ci] ([b67094f](https://github.com/webhippie/cursecli/commit/b67094fcc563e4864c18df7edbe635b5136e19e5))
+* **flake:** updated lockfile [skip ci] ([5efec8b](https://github.com/webhippie/cursecli/commit/5efec8b7c105f269e897377313f28b74e043f793))
+* **flake:** updated lockfile [skip ci] ([6058e21](https://github.com/webhippie/cursecli/commit/6058e21a33fcd9d7fddc2db8403b30cba2a8fbc1))
+
 ## [2.3.1](https://github.com/webhippie/cursecli/compare/v2.3.0...v2.3.1) (2025-12-22)
 
 
