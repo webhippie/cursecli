@@ -1,5 +1,28 @@
 # Changelog
 
+## [2.4.0](https://github.com/webhippie/cursecli/compare/v2.3.2...v2.4.0) (2026-03-02)
+
+### Features
+
+* upgrade build process to go 1.25 ([07adf96](https://github.com/webhippie/cursecli/commit/07adf96782de8fb085116b4afa39acafbc32002a))
+
+### Bugfixes
+
+* **deps:** pin golang docker tag to ac09a5f ([#202](https://github.com/webhippie/cursecli/issues/202)) ([5888920](https://github.com/webhippie/cursecli/commit/5888920e52c83251d56088984b89f354d8999937))
+
+### Dependencies
+
+* **minor:** update golang docker tag to v1.26.0 ([#203](https://github.com/webhippie/cursecli/issues/203)) ([70ac0e4](https://github.com/webhippie/cursecli/commit/70ac0e441a7819fe8f8070e220c58c5e890e2e15))
+
+### Miscellaneous
+
+* enable skip-package-name-collision-with-go-std for revive ([29365cd](https://github.com/webhippie/cursecli/commit/29365cdf1288391b7f8c867ee581461877dc97b6))
+* **flake:** updated lockfile [skip ci] ([2eeb6c9](https://github.com/webhippie/cursecli/commit/2eeb6c9a8c2aed713a59544c9ce4b7bec8786ff1))
+* **flake:** updated lockfile [skip ci] ([73e9792](https://github.com/webhippie/cursecli/commit/73e9792f2d4c3cf984f77f106c34387bc2854723))
+* **flake:** updated lockfile [skip ci] ([f7ccc7b](https://github.com/webhippie/cursecli/commit/f7ccc7bdaaaa2ae7b0d923da24aacf66e06a346f))
+* **flake:** updated lockfile [skip ci] ([3f33489](https://github.com/webhippie/cursecli/commit/3f33489f61ee7dd236eedbc08a26bafab07ea091))
+* replace nixfmt package ([55dc620](https://github.com/webhippie/cursecli/commit/55dc620749233130558298a544004e01279b7e77))
+
 ## [2.3.2](https://github.com/webhippie/cursecli/compare/v2.3.1...v2.3.2) (2026-02-02)
 
 ### Bugfixes
