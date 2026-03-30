@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.5.0](https://github.com/webhippie/cursecli/compare/v2.4.1...v2.5.0) (2026-03-30)
+
+### Dependencies
+
+* **minor:** update module github.com/rs/zerolog to v1.35.0 ([#217](https://github.com/webhippie/cursecli/issues/217)) ([62ff47e](https://github.com/webhippie/cursecli/commit/62ff47eb564b8b92c4a4cda6fff90350bc4cac25))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([8cfbe21](https://github.com/webhippie/cursecli/commit/8cfbe21ed4a75cf74edbbcb89b13084351e9b0ad))
+* **flake:** updated lockfile [skip ci] ([b3620c1](https://github.com/webhippie/cursecli/commit/b3620c1253601668c9d3542b1bed38480cdaf3bf))
+* **flake:** updated lockfile [skip ci] ([5bd2f19](https://github.com/webhippie/cursecli/commit/5bd2f1931014b0a74219ae57ee4f68b316b4ed95))
+
 ## [2.4.1](https://github.com/webhippie/cursecli/compare/v2.4.0...v2.4.1) (2026-03-09)
 
 ### Dependencies
