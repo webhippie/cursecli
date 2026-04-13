@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.5.1](https://github.com/webhippie/cursecli/compare/v2.5.0...v2.5.1) (2026-04-13)
+
+### Dependencies
+
+* **patch:** update golang docker tag to v1.26.2 ([#218](https://github.com/webhippie/cursecli/issues/218)) ([f1b0db7](https://github.com/webhippie/cursecli/commit/f1b0db75842c209218cb8b9742b974bd5190749d))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([be7c1b3](https://github.com/webhippie/cursecli/commit/be7c1b3a8ad56e564c11321bc431734f9dcd410a))
+* **flake:** updated lockfile [skip ci] ([0b1fd67](https://github.com/webhippie/cursecli/commit/0b1fd670d95f2b5af70d98df0b220ed5d7540a72))
+
 ## [2.5.0](https://github.com/webhippie/cursecli/compare/v2.4.1...v2.5.0) (2026-03-30)
 
 ### Dependencies
