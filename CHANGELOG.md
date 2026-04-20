@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.5.2](https://github.com/webhippie/cursecli/compare/v2.5.1...v2.5.2) (2026-04-20)
+
+### Bugfixes
+
+* **deps:** update docker digests ([#220](https://github.com/webhippie/cursecli/issues/220)) ([8e3c5d9](https://github.com/webhippie/cursecli/commit/8e3c5d99cc3b27e2bd5e550ddcfc40b0db9a6371))
+* **deps:** update golang:1.26.2-alpine docker digest to f853308 ([#222](https://github.com/webhippie/cursecli/issues/222)) ([b301ef5](https://github.com/webhippie/cursecli/commit/b301ef593c50020b4ee476130e5d4207b1c7b36a))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([1d6434b](https://github.com/webhippie/cursecli/commit/1d6434b0625a0d01328275f6ec4186cb8a1462c7))
+
 ## [2.5.1](https://github.com/webhippie/cursecli/compare/v2.5.0...v2.5.1) (2026-04-13)
 
 ### Dependencies
