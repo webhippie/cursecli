@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.6.0](https://github.com/webhippie/cursecli/compare/v2.5.4...v2.6.0) (2026-05-25)
+
+### Features
+
+* upgrade required go version to 1.26 ([41b4ae2](https://github.com/webhippie/cursecli/commit/41b4ae218cd6f85693507be73bc7a150f14a72ca))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([218759d](https://github.com/webhippie/cursecli/commit/218759d26d5d7a683542526f1c9dea1580f7f141))
+* **flake:** updated lockfile [skip ci] ([8e69a05](https://github.com/webhippie/cursecli/commit/8e69a0587eba0c7afcc105c7a33f2a802d24d174))
+
 ## [2.5.4](https://github.com/webhippie/cursecli/compare/v2.5.3...v2.5.4) (2026-05-11)
 
 ### Dependencies
