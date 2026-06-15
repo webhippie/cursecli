@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.7.0](https://github.com/webhippie/cursecli/compare/v2.6.1...v2.7.0) (2026-06-15)
+
+### Bugfixes
+
+* **deps:** update docker digests ([3488f49](https://github.com/webhippie/cursecli/commit/3488f497445a1e5930e06b9f10c3f66d827de180))
+* **deps:** update docker digests ([4567205](https://github.com/webhippie/cursecli/commit/4567205585737fa52367ff346053fbf48eb61490))
+* **deps:** update docker digests ([#233](https://github.com/webhippie/cursecli/issues/233)) ([c2863be](https://github.com/webhippie/cursecli/commit/c2863bee8754f368226accb7a83ded54ef4e4493))
+
+### Dependencies
+
+* **minor:** update alpine docker tag to v3.24 ([#231](https://github.com/webhippie/cursecli/issues/231)) ([46193eb](https://github.com/webhippie/cursecli/commit/46193eba1e0982fda1ead8425735acf660095b75))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([394229b](https://github.com/webhippie/cursecli/commit/394229bddb51bec79bc836a3e895eeb22571e687))
+
 ## [2.6.1](https://github.com/webhippie/cursecli/compare/v2.6.0...v2.6.1) (2026-06-08)
 
 ### Dependencies
