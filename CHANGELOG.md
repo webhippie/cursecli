@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.7.1](https://github.com/webhippie/cursecli/compare/v2.7.0...v2.7.1) (2026-06-22)
+
+### Bugfixes
+
+* **deps:** update docker digests ([#234](https://github.com/webhippie/cursecli/issues/234)) ([7837d9f](https://github.com/webhippie/cursecli/commit/7837d9fa977b22281d2a79105bbb0ab4807490e3))
+* **deps:** update docker digests ([#235](https://github.com/webhippie/cursecli/issues/235)) ([51c2fff](https://github.com/webhippie/cursecli/commit/51c2fff821adf782c65d170284d33e3b2135fa05))
+* **deps:** update docker digests ([#236](https://github.com/webhippie/cursecli/issues/236)) ([b75a27d](https://github.com/webhippie/cursecli/commit/b75a27d829b4bc721376b9dabf88d51560265442))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([bec79a5](https://github.com/webhippie/cursecli/commit/bec79a51e5803d02c72823c1b82ae3a5f2856b9e))
+
 ## [2.7.0](https://github.com/webhippie/cursecli/compare/v2.6.1...v2.7.0) (2026-06-15)
 
 ### Bugfixes
