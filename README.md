@@ -19,12 +19,22 @@ Cloudsmith is the only fully hosted, cloud-native, universal package management
 solution, that enables your organization to create, store and share packages in
 any format, to any place, with total confidence.
 
+## Prerequisites
+
+We use [mise][mise] to manage all required tools and their versions. Install it
+by following the [official installation instructions][mise-install], then run
+the following commands inside the repository to activate mise and install all
+tools defined in `mise.toml`:
+
+```console
+mise trust
+mise install
+```
+
 ## Build
 
-If you are not familiar with [Nix][nix] it is up to you to have a working
-environment for Go (>= 1.26.0) as the setup won't we covered within this guide.
-Please follow the official install instructions for [Go][golang]. Beside that we
-are using [go-task][gotask] to define all commands to build this project.
+Since all required commands ar part of our [go-task][gotask] taskfile the
+commands you got to execute are quite simple:
 
 ```console
 git clone https://github.com/webhippie/cursecli.git
@@ -34,29 +44,18 @@ task build
 ./bin/cursecli -h
 ```
 
-If you got [Nix][nix] and [Direnv][direnv] configured you can simply execute
-the following commands to get al dependencies including [go-task][gotask] and
-the required runtimes installed. You are also able to directly use the process
-manager of [devenv][devenv]:
-
-```console
-cat << EOF > .envrc
-use flake . --impure --extra-experimental-features nix-command
-EOF
-
-direnv allow
-```
-
 ## Development
 
-To start developing on this project you have to execute only one command to
-build a binary matching your platform:
+To start developing on this project you have to execute only a few commands in
+multiple terminal tabs or windows:
 
 ```console
-task build
+task watch
 ```
 
-After that you can simply execute the tool via `bin/cursecli -h`.
+After that you can simply execute the tool via `bin/cursecli -h`. Generally it
+supports hot reloading which means the binary gets automatically recompiled on
+code changes.
 
 ## Security
 
@@ -87,10 +86,10 @@ Copyright (c) 2022 Thomas Boerger <thomas@webhippie.de>
 [dockerhub]: https://hub.docker.com/r/webhippie/cursecli/tags/
 [quay]: https://quay.io/repository/webhippie/cursecli?tab=tags
 [docs]: https://webhippie.github.io/cursecli/#getting-started
-[nix]: https://nixos.org/
-[golang]: http://golang.org/doc/install.html
-[gotask]: https://taskfile.dev/installation/
-[direnv]: https://direnv.net/
-[devenv]: https://devenv.sh/
 [pkgrepo]: https://cloudsmith.io/~webhippie/repos/general/groups/
 [cloudsmith]: https://cloudsmith.com/
+[gotask]: https://taskfile.dev/installation/
+[mise]: https://mise.jdx.dev/
+[mise-install]: https://mise.jdx.dev/getting-started.html
+[commits]: https://www.conventionalcommits.org/en/v1.0.0/
+[semver]: https://semver.org/
