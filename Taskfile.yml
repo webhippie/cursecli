@@ -60,21 +60,6 @@ tasks:
 
   build:
     desc: Build all required binary artifacts
-    deps:
-      - build:server
-
-  build:release:
-    desc: Generate a release with goreleaser
-    cmds:
-      - goreleaser release --clean
-
-  build:snapshot:
-    desc: Generate a snapshot with goreleaser
-    cmds:
-      - goreleaser release --clean --snapshot --skip=announce,publish,validate,sign
-
-  build:server:
-    desc: Build server component
     cmds:
       - go build -v
           -tags 'netgo'
@@ -95,20 +80,25 @@ tasks:
       GOARCH:
         sh: go env GOARCH
 
+  build:release:
+    desc: Generate a release with goreleaser
+    cmds:
+      - goreleaser release --clean
+
+  build:snapshot:
+    desc: Generate a snapshot with goreleaser
+    cmds:
+      - goreleaser release --clean --snapshot --skip=announce,publish,validate,sign
+
   watch:
     desc: Run reloading development server
     cmds:
-      - task: build:server
+      - task: build
     watch: true
     method: none
     sources:
       - 'cmd/**/*.go'
       - 'pkg/**/*.go'
       - 'pkg/**/*.tmpl'
-
-  docs:
-    desc: Generate documentation with hugo
-    cmds:
-      - hugo -s docs/
 
 ...
