@@ -1,5 +1,28 @@
 # Changelog
 
+## [2.8.0](https://github.com/webhippie/cursecli/compare/v2.7.3...v2.8.0) (2026-09-14)
+
+### Features
+
+* restructure repo and build processes ([392f2c7](https://github.com/webhippie/cursecli/commit/392f2c77466780c164fc56d741f31373ed1ab60e))
+
+### Bugfixes
+
+* **deps:** update golang:1.27.1-alpine docker digest to cf6fca6 ([#254](https://github.com/webhippie/cursecli/issues/254)) ([5a40418](https://github.com/webhippie/cursecli/commit/5a40418ecbafc6c640853eb9b881154bad58983c))
+* drop deprecated DualStack attribute ([c8a8ef6](https://github.com/webhippie/cursecli/commit/c8a8ef615ce381b4a3942c6b99f7bc146dd345c8))
+
+### Dependencies
+
+* **minor:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.26.0 ([#255](https://github.com/webhippie/cursecli/issues/255)) ([66382df](https://github.com/webhippie/cursecli/commit/66382dfdc9b704d29b143bdaf53a1f2f2268e71b))
+* **minor:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.27.0 ([#257](https://github.com/webhippie/cursecli/issues/257)) ([0e0c4f3](https://github.com/webhippie/cursecli/commit/0e0c4f37946a54f192dc12cab3fd2b109c2d262f))
+* **minor:** update dependency hugo-extended to v0.166.0 ([#258](https://github.com/webhippie/cursecli/issues/258)) ([54d06df](https://github.com/webhippie/cursecli/commit/54d06df9a7c78e066986474a8dae45d149da12f2))
+* **minor:** update dependency task to v3.53.1 ([#256](https://github.com/webhippie/cursecli/issues/256)) ([bfe9851](https://github.com/webhippie/cursecli/commit/bfe98512f50e1d24f6cc7711bcc3e8049aa87984))
+* **minor:** update golang docker tag to v1.27.0 ([#250](https://github.com/webhippie/cursecli/issues/250)) ([9951423](https://github.com/webhippie/cursecli/commit/9951423c3a0b6c318c405a9168f3f29979113248))
+* **minor:** update module github.com/stretchr/testify to v1.12.0 ([#248](https://github.com/webhippie/cursecli/issues/248)) ([e19b36a](https://github.com/webhippie/cursecli/commit/e19b36ada3ea01c90526623de5c9948b2d132e86))
+* **patch:** update dependency prek to v0.5.3 ([#259](https://github.com/webhippie/cursecli/issues/259)) ([6838cdc](https://github.com/webhippie/cursecli/commit/6838cdce34f05d1178e7fe713a449af61e2296ed))
+* **patch:** update golang docker tag to v1.27.1 ([#253](https://github.com/webhippie/cursecli/issues/253)) ([641850b](https://github.com/webhippie/cursecli/commit/641850b4a7d80615572ce733271f5b29e42499d9))
+* **patch:** update module github.com/stretchr/testify to v1.12.1 ([#249](https://github.com/webhippie/cursecli/issues/249)) ([daad9a1](https://github.com/webhippie/cursecli/commit/daad9a1cb3289d4d13bd92c58358c99e5ad66b6d))
+
 ## [2.7.3](https://github.com/webhippie/cursecli/compare/v2.7.2...v2.7.3) (2026-08-17)
 
 ## [2.7.2](https://github.com/webhippie/cursecli/compare/v2.7.1...v2.7.2) (2026-07-13)
