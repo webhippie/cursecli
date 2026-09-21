@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.8.1](https://github.com/webhippie/cursecli/compare/v2.8.0...v2.8.1) (2026-09-21)
+
+### Bugfixes
+
+* **deps:** update alpine:3.24 docker digest to e7c4abb ([#261](https://github.com/webhippie/cursecli/issues/261)) ([663e697](https://github.com/webhippie/cursecli/commit/663e697dddd4467050d754afdad442ab42489e4a))
+* **deps:** update docker digests ([#262](https://github.com/webhippie/cursecli/issues/262)) ([4ade8b2](https://github.com/webhippie/cursecli/commit/4ade8b2d17d9bee3e2cd2f361b0eaeb797c2858a))
+* **deps:** update docker digests ([#263](https://github.com/webhippie/cursecli/issues/263)) ([7f62b2f](https://github.com/webhippie/cursecli/commit/7f62b2f10f815758239b6ea4297fcc9e768db08c))
+
+### Dependencies
+
+* **mise:** update dependency goreleaser to v2.18.2 ([#260](https://github.com/webhippie/cursecli/issues/260)) ([c90a439](https://github.com/webhippie/cursecli/commit/c90a439e1bc778a47defe4ab742984da893de6a1))
+
 ## [2.8.0](https://github.com/webhippie/cursecli/compare/v2.7.3...v2.8.0) (2026-09-14)
 
 ### Features
