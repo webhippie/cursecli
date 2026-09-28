@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.8.2](https://github.com/webhippie/cursecli/compare/v2.8.1...v2.8.2) (2026-09-28)
+
+### Bugfixes
+
+* **deps:** update golang:1.27.1-alpine docker digest to 8a5910f ([#264](https://github.com/webhippie/cursecli/issues/264)) ([3bc9e98](https://github.com/webhippie/cursecli/commit/3bc9e987bf3a6b9e61e1bcd5ba5a347891f622db))
+
+### Dependencies
+
+* **mise:** update dependency golangci-lint to v2.14.0 ([#265](https://github.com/webhippie/cursecli/issues/265)) ([0c5e2dd](https://github.com/webhippie/cursecli/commit/0c5e2dda2e385a89a8957a118ac35aba11b3eedd))
+* **mise:** update dependency hugo-extended to v0.167.0 ([#268](https://github.com/webhippie/cursecli/issues/268)) ([9be4925](https://github.com/webhippie/cursecli/commit/9be49253fc01b5f71ba38f562a25addc93f1e67c))
+
 ## [2.8.1](https://github.com/webhippie/cursecli/compare/v2.8.0...v2.8.1) (2026-09-21)
 
 ### Bugfixes
