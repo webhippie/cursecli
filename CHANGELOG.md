@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.8.5](https://github.com/webhippie/cursecli/compare/v2.8.4...v2.8.5) (2026-11-02)
+
+### Bugfixes
+
+* **deps:** update golang:1.27.3-alpine docker digest to d200d2d ([#293](https://github.com/webhippie/cursecli/issues/293)) ([634c9be](https://github.com/webhippie/cursecli/commit/634c9bed30f543fa12b27f61a450d3e50ef2b5aa))
+
+### Dependencies
+
+* **mise:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.30.1 ([#295](https://github.com/webhippie/cursecli/issues/295)) ([fbbdd6d](https://github.com/webhippie/cursecli/commit/fbbdd6d280322d3e129493772559e3f1fd8f6952))
+* **mise:** update dependency hugo-extended to v0.169.0 ([#294](https://github.com/webhippie/cursecli/issues/294)) ([4d7916e](https://github.com/webhippie/cursecli/commit/4d7916e5fbf4917e927a21d8504334f07c4ee64b))
+* **mise:** update dependency prek to v0.5.9 ([#297](https://github.com/webhippie/cursecli/issues/297)) ([297982b](https://github.com/webhippie/cursecli/commit/297982bcdf062c1b39d9202d8b16106b0733a24e))
+* **mise:** update node.js to v26 ([#296](https://github.com/webhippie/cursecli/issues/296)) ([bfbf399](https://github.com/webhippie/cursecli/commit/bfbf399374f514be4e2585d50bdf3337bcadd03a))
+
 ## [2.8.4](https://github.com/webhippie/cursecli/compare/v2.8.3...v2.8.4) (2026-10-26)
 
 ### Bugfixes
