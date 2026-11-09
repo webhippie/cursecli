@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.8.6](https://github.com/webhippie/cursecli/compare/v2.8.5...v2.8.6) (2026-11-09)
+
+### Bugfixes
+
+* **deps:** update alpine:3.24 docker digest to f59abe6 ([#302](https://github.com/webhippie/cursecli/issues/302)) ([bcf36c1](https://github.com/webhippie/cursecli/commit/bcf36c13bfda7f932a4efeb9a08452f2e3cf5920))
+* **deps:** update docker digests ([#300](https://github.com/webhippie/cursecli/issues/300)) ([8cc1f31](https://github.com/webhippie/cursecli/commit/8cc1f310ddd012d095e3738e102a4194d372e8d5))
+* **deps:** update golang:1.27.3-alpine docker digest to fa3d596 ([#301](https://github.com/webhippie/cursecli/issues/301)) ([3b7c6ed](https://github.com/webhippie/cursecli/commit/3b7c6ed316759ac467543de2dce9a7b7454cda00))
+
+### Dependencies
+
+* **mise:** update dependency goreleaser to v2.20.0 ([#299](https://github.com/webhippie/cursecli/issues/299)) ([a4249ad](https://github.com/webhippie/cursecli/commit/a4249ad0f9a3800a136c775c359cff80448b4542))
+* **mise:** update dependency prek to v0.5.10 ([#298](https://github.com/webhippie/cursecli/issues/298)) ([7fda8bd](https://github.com/webhippie/cursecli/commit/7fda8bd58341e7bef9f9e4854eaa4345beaa0738))
+
 ## [2.8.5](https://github.com/webhippie/cursecli/compare/v2.8.4...v2.8.5) (2026-11-02)
 
 ### Bugfixes
