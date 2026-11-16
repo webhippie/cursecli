@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.8.7](https://github.com/webhippie/cursecli/compare/v2.8.6...v2.8.7) (2026-11-16)
+
+* automated release update [skip ci] ([b1c451d](https://github.com/webhippie/cursecli/commit/b1c451df19b7c5d0c1e9e59b1e6eb000ee4e026d))
+
+### Dependencies
+
+* **mise:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.31.0 ([#306](https://github.com/webhippie/cursecli/issues/306)) ([3075d55](https://github.com/webhippie/cursecli/commit/3075d55cfe5dd588047aec717f708f3d38937ab2))
+* **mise:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.31.1 ([#307](https://github.com/webhippie/cursecli/issues/307)) ([c3c7381](https://github.com/webhippie/cursecli/commit/c3c7381032dd795215e8b8bbb8ae591ef62f2f6f))
+* **mise:** update dependency go to v1.27.4 ([#303](https://github.com/webhippie/cursecli/issues/303)) ([0c5572a](https://github.com/webhippie/cursecli/commit/0c5572a0384b511294fd0a710b60ed26e52545b9))
+* **mise:** update dependency goreleaser to v2.20.1 ([#305](https://github.com/webhippie/cursecli/issues/305)) ([112bea2](https://github.com/webhippie/cursecli/commit/112bea2b35aec443072f7a72bc551fd1b45cce26))
+* **mise:** update dependency goreleaser to v2.20.2 ([#308](https://github.com/webhippie/cursecli/issues/308)) ([c5c38b5](https://github.com/webhippie/cursecli/commit/c5c38b57c7c7d81a0f0a1ff7bb1fb4f5ed49638b))
+* **mise:** update dependency hugo-extended to v0.170.0 ([#309](https://github.com/webhippie/cursecli/issues/309)) ([cea9d66](https://github.com/webhippie/cursecli/commit/cea9d66a1598215ab5863020f9225505e201a70b))
+* **patch:** update golang docker tag to v1.27.4 ([#304](https://github.com/webhippie/cursecli/issues/304)) ([1a1d4ca](https://github.com/webhippie/cursecli/commit/1a1d4ca5e4687bddf28f5bb8e106bd996b304f7b))
+
 ## [2.8.6](https://github.com/webhippie/cursecli/compare/v2.8.5...v2.8.6) (2026-11-09)
 
 ### Bugfixes
